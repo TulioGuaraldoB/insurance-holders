@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\InsuranceHolders.Infra\InsuranceHolders.Infra.csproj" />
+    <ProjectReference Include="..\InsuranceHolders.Domain\InsuranceHolders.Domain.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+</Project>
