@@ -2,6 +2,7 @@ using System;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using InsuranceHolders.Domain.Interfaces;
+using InsuranceHolders.Web.Dtos;
 
 namespace InsuranceHolders.Web.Controllers
 {
@@ -11,6 +12,7 @@ namespace InsuranceHolders.Web.Controllers
     {
         private readonly IHolderQueries _holderQueries;
         private readonly IHolderCommands _holderCommands;
+        private readonly HolderDto _holderDto = new HolderDto();
 
         public InsuranceHolderController(IHolderQueries holderQueries, IHolderCommands holderCommands)
         {
@@ -27,7 +29,9 @@ namespace InsuranceHolders.Web.Controllers
                 if (holders.Count() <= 0)
                     return NotFound("data not found");
 
-                return Ok(holders);
+                var holdersResponse = _holderDto.ParseHoldersToResponse(holders);
+
+                return Ok(holdersResponse);
             }
             catch (Exception ex)
             {
@@ -49,6 +53,22 @@ namespace InsuranceHolders.Web.Controllers
             catch (Exception ex)
             {
                 return BadRequest($"Failed to get holder. {(ex ?? ex.InnerException).Message}");
+            }
+        }
+
+        [HttpPost("")]
+        public IActionResult CreateHolder(HolderRequest holderRequest)
+        {
+            try
+            {
+                var holder = _holderDto.ParseRequestToHolder(holderRequest);
+                _holderCommands.CreateHolder(holder);
+
+                return Ok(new { message = "Holder created successfully!", holder = holderRequest });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest($"Failed to create holder. ${(ex ?? ex.InnerException).Message}");
             }
         }
     }
