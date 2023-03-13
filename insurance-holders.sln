@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceHolders.Applicatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceHolders.Util", "InsuranceHolders.Util\InsuranceHolders.Util.csproj", "{6A825DAB-2EE5-4F43-B64A-9CA74C2B31F5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsuranceHolders.Test", "InsuranceHolders.Test\InsuranceHolders.Test.csproj", "{A971309B-F482-4CF9-B895-4AAA4F95B716}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{6A825DAB-2EE5-4F43-B64A-9CA74C2B31F5}.Release|x64.Build.0 = Release|Any CPU
 		{6A825DAB-2EE5-4F43-B64A-9CA74C2B31F5}.Release|x86.ActiveCfg = Release|Any CPU
 		{6A825DAB-2EE5-4F43-B64A-9CA74C2B31F5}.Release|x86.Build.0 = Release|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Debug|x64.Build.0 = Debug|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Debug|x86.Build.0 = Debug|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Release|x64.ActiveCfg = Release|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Release|x64.Build.0 = Release|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Release|x86.ActiveCfg = Release|Any CPU
+		{A971309B-F482-4CF9-B895-4AAA4F95B716}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -2,6 +2,7 @@ using System;
 using InsuranceHolders.Infra.Context;
 using InsuranceHolders.Domain.Models;
 using InsuranceHolders.Domain.Interfaces;
+using System.Threading.Tasks;
 
 namespace InsuranceHolders.Infra.Repositories
 {
@@ -14,12 +15,12 @@ namespace InsuranceHolders.Infra.Repositories
             _db = db;
         }
 
-        public void CreateHolder(Holder holder)
+        public async Task CreateHolder(Holder holder)
         {
             try
             {
                 _db.Holders.Add(holder);
-                _db.SaveChanges();
+                await _db.SaveChangesAsync();
             }
             catch (Exception ex)
             {

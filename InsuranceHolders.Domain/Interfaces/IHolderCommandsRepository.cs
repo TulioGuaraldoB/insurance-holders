@@ -1,9 +1,10 @@
+using System.Threading.Tasks;
 using InsuranceHolders.Domain.Models;
 
 namespace InsuranceHolders.Domain.Interfaces
 {
     public interface IHolderCommandsRepository
     {
-        void CreateHolder(Holder holder);
+        Task CreateHolder(Holder holder);
     }
 }
