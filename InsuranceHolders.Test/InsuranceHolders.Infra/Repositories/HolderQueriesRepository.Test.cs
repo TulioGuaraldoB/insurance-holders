@@ -9,7 +9,7 @@ using InsuranceHolders.Infra.Repositories;
 
 namespace InsuranceHolders.Test.Infra.Repositories
 {
-    public class HolderQueriesRepositoriesTest
+    public class HolderQueriesRepositoryTest
     {
         [Fact]
         public void Should_Return_Success_On_GetAllHoldersRepository()
