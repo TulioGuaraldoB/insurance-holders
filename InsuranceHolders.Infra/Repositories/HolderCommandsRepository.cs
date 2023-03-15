@@ -1,8 +1,9 @@
 using System;
+using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using InsuranceHolders.Infra.Context;
 using InsuranceHolders.Domain.Models;
 using InsuranceHolders.Domain.Interfaces;
-using System.Threading.Tasks;
 
 namespace InsuranceHolders.Infra.Repositories
 {
@@ -21,6 +22,8 @@ namespace InsuranceHolders.Infra.Repositories
             {
                 _db.Holders.Add(holder);
                 await _db.SaveChangesAsync();
+
+                _db.Entry(holder).State = EntityState.Added;
             }
             catch (Exception ex)
             {

@@ -48,7 +48,8 @@ namespace InsuranceHolders.Web.Controllers
                 if (holder == null)
                     return NotFound("data not found");
 
-                return Ok(holder);
+                var holderResponse = _holderDto.ParseHolderToResponse(holder);
+                return Ok(holderResponse);
             }
             catch (Exception ex)
             {
@@ -56,7 +57,7 @@ namespace InsuranceHolders.Web.Controllers
             }
         }
 
-        [HttpPost("")]
+        [HttpPost]
         public IActionResult CreateHolder(HolderRequest holderRequest)
         {
             try
